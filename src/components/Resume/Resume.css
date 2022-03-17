@@ -1,0 +1,8 @@
+.resume {
+  display: flex;
+  justify-content: center;
+}
+
+.resumeAlign {
+  align-self: center;
+}

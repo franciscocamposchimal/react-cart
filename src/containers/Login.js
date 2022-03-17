@@ -1,15 +1,16 @@
-import { connect } from 'react-redux';
-import Login from '../components/Login';
-import { userSession } from '../ducks/users';
+import { connect } from "react-redux";
+import Login from "../components/Login";
+import { getUserMenu, userSession } from "../ducks/users";
 
 const mapStateToProps = (state, props) => {
-    return {
-        userLogged: state.users.userLogged,
-    }
-}
+  return {
+    userLogged: state.users.userLogged,
+    userMenu: getUserMenu(state, props),
+  };
+};
 
 const mapDispatchToProps = (dispatch) => ({
-    userExists: (user) => dispatch(userSession(user))
-})
+  userExists: (user) => dispatch(userSession(user)),
+});
 
-export default connect(mapStateToProps,mapDispatchToProps)(Login);
+export default connect(mapStateToProps, mapDispatchToProps)(Login);

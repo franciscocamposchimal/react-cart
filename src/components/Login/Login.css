@@ -1,0 +1,9 @@
+.login {
+  padding: 15%;
+  display: flex;
+  justify-content: center;
+}
+
+.cardLogin {
+  align-self: center;
+}
